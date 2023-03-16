@@ -1,18 +1,17 @@
-import { useState } from "react";
+import * as React from "react";
 import { Routes, Route } from "react-router-dom";
-import './App.css';
-import { NotFound } from "./components/404/NotFound";
-import { Cart } from "./components/Cart/Cart";
-import { Home } from "./components/Home/Home";
-import { Login } from "./components/Login/Login";
+import Login from "./components/Login/login";
+import "./App.css";
 import { ProviderUsuario } from "./contexts/global";
+import NotFound from "./components/404/notFound";
+import Home from "./components/Home/home";
+import Cart from "./components/Cart/cart";
 
-function App() {
-  const [user, setUser] = useState({ email: "", password: "" });
-  const [count, setCount] = useState(0);
-  const [addCar, setAddCart] = useState(0);
-  const [current, setCurrent] = useState('');
-
+export default function App() {
+  const [user, setUser] = React.useState({ email: "", password: "" });
+  const [count, setCount] = React.useState(0);
+  const [addCar, setAddCart] = React.useState(0);
+  const [current, setCurrent] = React.useState('');
   return (
     <ProviderUsuario
       value={{
@@ -35,5 +34,3 @@ function App() {
     </ProviderUsuario>
   );
 }
-
-export default App;
