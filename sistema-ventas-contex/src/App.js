@@ -1,9 +1,9 @@
 import * as React from "react";
 import { Routes, Route } from "react-router-dom";
-import Login from "./components/Login/login";
 import "./App.css";
 import { ProviderUsuario } from "./contexts/global";
 import NotFound from "./components/404/notFound";
+import Login from "./components/Login/login";
 import Home from "./components/Home/home";
 import Cart from "./components/Cart/cart";
 
